@@ -3,7 +3,7 @@ package koans.functional;
 
 import errors.EmptyKoan;
 
-public class AnonymousKoan {
+public class AnonymousClass {
 
 	public interface Anon {
 		boolean isAnon();

@@ -2,20 +2,20 @@
 package runner;
 
 import errors.KoanError;
-import koans.functional.AnonymousKoan;
+import koans.functional.AnonymousClass;
 
 public class FunctionalKoans {
 
 	public void run() throws KoanError {
-		runAnonymousKoan();
+		runAnonymousClassKoan();
 	}
 
-	private void runAnonymousKoan() throws KoanError {
+	private void runAnonymousClassKoan() throws KoanError {
 
-		AnonymousKoan koan = new AnonymousKoan();
+		AnonymousClass koan = new AnonymousClass();
 		String koanName = koan.getClass().getName();
 
-		AnonymousKoan.Anon anon = koan.getAnonymousClass();
+		AnonymousClass.Anon anon = koan.getAnonymousClass();
 
 		if (anon == null) {
 			throw new KoanError(koan, "Anonymous class must not be null.");
