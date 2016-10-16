@@ -1,5 +1,7 @@
 ./KoanMain.java
 ./errors/EmptyKoan.java
+./runner/Runner.java
 ./runner/KoanRunner.java
-./runner/FunctionalKoans.java
+./runner/functional/AnonymousClassRunner.java
+./runner/functional/FunctionalRunner.java
 ./koans/functional/AnonymousClass.java

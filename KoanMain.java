@@ -1,11 +1,11 @@
 
-import runner.KoanRunner;
+import runner.Runner;
 
 public class KoanMain {
 
 	public static void main(String[] args) {
 
-		KoanRunner runner = new KoanRunner();
+		Runner runner = new Runner();
 		runner.run();
 	}
 

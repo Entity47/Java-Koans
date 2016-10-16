@@ -1,16 +1,14 @@
 
-package runner;
+
+package runner.functional;
 
 import errors.KoanError;
 import koans.functional.AnonymousClass;
+import runner.KoanRunner;
 
-public class FunctionalKoans {
+public class AnonymousClassRunner implements KoanRunner {
 
 	public void run() throws KoanError {
-		runAnonymousClassKoan();
-	}
-
-	private void runAnonymousClassKoan() throws KoanError {
 
 		AnonymousClass koan = new AnonymousClass();
 		String koanName = koan.getClass().getName();

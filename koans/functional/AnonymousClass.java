@@ -6,7 +6,7 @@ import errors.EmptyKoan;
 public class AnonymousClass {
 
 	public interface Anon {
-		boolean isAnon();
+		public boolean isAnon();
 	}
 
 	public Anon getAnonymousClass() {
