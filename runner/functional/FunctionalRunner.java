@@ -10,5 +10,8 @@ public class FunctionalRunner implements KoanRunner {
 
 		AnonymousClassRunner anon = new AnonymousClassRunner();
 		anon.run();
+
+		LambdaFunctionRunner lambda = new LambdaFunctionRunner();
+		lambda.run();
 	}
 }
