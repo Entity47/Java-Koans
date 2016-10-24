@@ -13,5 +13,8 @@ public class FunctionalRunner implements KoanRunner {
 
 		LambdaFunctionRunner lambda = new LambdaFunctionRunner();
 		lambda.run();
+
+		ConsumerRunner consumer = new ConsumerRunner();
+		consumer.run();
 	}
 }
