@@ -11,8 +11,8 @@ public class FunctionalRunner implements KoanRunner {
 		AnonymousClassRunner anon = new AnonymousClassRunner();
 		anon.run();
 
-		LambdaFunctionRunner lambda = new LambdaFunctionRunner();
-		lambda.run();
+		SupplierRunner supplier = new SupplierRunner();
+		supplier.run();
 
 		ConsumerRunner consumer = new ConsumerRunner();
 		consumer.run();

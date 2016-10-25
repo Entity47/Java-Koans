@@ -4,8 +4,8 @@
 ./runner/KoanRunner.java
 ./runner/functional/AnonymousClassRunner.java
 ./runner/functional/ConsumerRunner.java
-./runner/functional/LambdaFunctionRunner.java
+./runner/functional/SupplierRunner.java
 ./runner/functional/FunctionalRunner.java
 ./koans/functional/AnonymousClass.java
 ./koans/functional/ConsumerLambda.java
-./koans/functional/LambdaFunction.java
+./koans/functional/SupplierLambda.java
