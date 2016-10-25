@@ -15,14 +15,7 @@ public class ConsumerRunner implements KoanRunner {
 
 		Consumer<String> consumer = koan.getConsumerLambda();
 
-		if (consumer == null) {
-			throw new KoanError(koan, "Consumer must not be null");
-		}
-
-		String name = consumer.getClass().getName();
-		if (!name.contains("$$Lambda")) {
-			throw new KoanError(koan, "Consumer must be a Lambda function.");
-		}
+		FunctionalHelper.validateLambda(koan, consumer);
 
 		consumer.accept("test1");
 		consumer.accept("test2");
