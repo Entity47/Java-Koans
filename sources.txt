@@ -8,4 +8,5 @@
 ./runner/functional/FunctionalRunner.java
 ./koans/functional/AnonymousClass.java
 ./koans/functional/ConsumerLambda.java
+./koans/functional/FunctionLambda.java
 ./koans/functional/SupplierLambda.java

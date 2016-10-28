@@ -16,5 +16,8 @@ public class FunctionalRunner implements KoanRunner {
 
 		ConsumerRunner consumer = new ConsumerRunner();
 		consumer.run();
+
+		FunctionRunner function = new FunctionRunner();
+		function.run();
 	}
 }

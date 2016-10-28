@@ -13,8 +13,7 @@ public class SupplierLambda {
 		 * Return a lambda function that implements the LambdaWorker interface.
 		 * This lambda function should simply return true.
 		 */
-		//throw new EmptyKoan();
-		return () -> true;
+		throw new EmptyKoan();
 	}
 
 }
