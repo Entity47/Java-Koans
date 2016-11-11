@@ -2,22 +2,19 @@
 package runner.functional;
 
 import errors.KoanError;
+import koans.functional.*;
 import runner.KoanRunner;
+import runner.KoanTester;
 
 public class FunctionalRunner implements KoanRunner {
 
 	public void run() throws KoanError {
 
-		AnonymousClassRunner anon = new AnonymousClassRunner();
-		anon.run();
+		KoanTester koanTester = new KoanTester();
 
-		SupplierRunner supplier = new SupplierRunner();
-		supplier.run();
-
-		ConsumerRunner consumer = new ConsumerRunner();
-		consumer.run();
-
-		FunctionRunner function = new FunctionRunner();
-		function.run();
+		koanTester.test(new AnonymousClass(), new AnonymousClassRunner());
+		koanTester.test(new SupplierLambda(), new SupplierTests());
+		koanTester.test(new ConsumerLambda(), new ConsumerTests());
+		koanTester.test(new FunctionLambda(), new FunctionTests());
 	}
 }

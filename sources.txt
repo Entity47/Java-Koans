@@ -2,10 +2,13 @@
 ./errors/EmptyKoan.java
 ./runner/Runner.java
 ./runner/KoanRunner.java
-./runner/functional/AnonymousClassRunner.java
-./runner/functional/ConsumerRunner.java
-./runner/functional/SupplierRunner.java
+./runner/KoanTester.java
+./runner/functional/AnonymousClassTests.java
+./runner/functional/ConsumerTests.java
+./runner/functional/SupplierTests.java
 ./runner/functional/FunctionalRunner.java
+./koans/Koan.java
+./koans/StatefulKoan.java
 ./koans/functional/AnonymousClass.java
 ./koans/functional/ConsumerLambda.java
 ./koans/functional/FunctionLambda.java

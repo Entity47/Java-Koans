@@ -2,14 +2,15 @@
 package koans.functional;
 
 import errors.EmptyKoan;
+import koans.Koan;
 
-public class AnonymousClass {
+public class AnonymousClass extends Koan<AnonymousClass.Anon> {
 
 	public interface Anon {
 		public boolean isAnon();
 	}
 
-	public Anon getAnonymousClass() {
+	public Anon answer() {
 
 		/*
 		 * Return an anonymous class that implements the Anon interface.

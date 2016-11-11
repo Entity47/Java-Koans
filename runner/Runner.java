@@ -29,6 +29,6 @@ public class Runner {
 			System.exit(1);
 		}
 
-		System.out.println("You have completed all Koans!");
+		System.out.println("\nYou have completed all Koans!\n");
 	}
 }

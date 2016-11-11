@@ -4,14 +4,15 @@ package koans.functional;
 import java.util.function.Supplier;
 
 import errors.EmptyKoan;
+import koans.Koan;
 
-public class SupplierLambda {
+public class SupplierLambda extends Koan<Supplier<Boolean>> {
 
-	public Supplier<Boolean> getSupplierLambda() {
+	public Supplier<Boolean> answer() {
 
 		/*
-		 * Return a lambda function that implements the LambdaWorker interface.
-		 * This lambda function should simply return true.
+		 * Return a lambda function that implements the supplier interface.
+		 * This lambda supplier should simply return true.
 		 */
 		throw new EmptyKoan();
 	}
