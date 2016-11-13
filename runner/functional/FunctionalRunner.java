@@ -6,7 +6,7 @@ import koans.functional.*;
 import runner.KoanRunner;
 import runner.KoanTester;
 
-public class FunctionalRunner {
+public class FunctionalRunner implements KoanRunner {
 
 	public void runTests(KoanTester koanTester) throws KoanError {
 

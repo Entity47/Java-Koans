@@ -1,8 +1,13 @@
 
+import java.util.List;
+import java.util.ArrayList;
+
 import errors.EmptyKoan;
 import errors.KoanError;
 import runner.KoanTester;
+import runner.KoanRunner;
 import runner.functional.FunctionalRunner;
+import runner.streams.StreamsRunner;
 
 public class KoanMain {
 
@@ -10,10 +15,14 @@ public class KoanMain {
 
 		KoanTester koanTester = new KoanTester();
 
-		FunctionalRunner functional = new FunctionalRunner();
+		List<KoanRunner> runners = new ArrayList<KoanRunner>();
+		runners.add(new FunctionalRunner());
+		runners.add(new StreamsRunner());
 
 		try {
-			functional.runTests(koanTester);
+			for(KoanRunner runner : runners) {
+				runner.runTests(koanTester);
+			}
 		} catch (EmptyKoan empty) {
 			StackTraceElement[] traceElems = empty.getStackTrace();
 			String koanName = traceElems[0].getClassName();
