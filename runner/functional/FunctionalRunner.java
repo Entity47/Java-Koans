@@ -6,11 +6,9 @@ import koans.functional.*;
 import runner.KoanRunner;
 import runner.KoanTester;
 
-public class FunctionalRunner implements KoanRunner {
+public class FunctionalRunner {
 
-	public void run() throws KoanError {
-
-		KoanTester koanTester = new KoanTester();
+	public void runTests(KoanTester koanTester) throws KoanError {
 
 		koanTester.test(new AnonymousClass(), new AnonymousClassRunner());
 		koanTester.test(new SupplierLambda(), new SupplierTests());

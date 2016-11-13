@@ -1,7 +1,10 @@
 
 package koans;
 
-public abstract class StatefulKoan<T, U> extends Koan<T> {
+/*
+ * Stateful Koans allow testing of functionality that modifies the state of a Koan.
+ */
+public interface StatefulKoan<T, U> extends Koan<T> {
 
-	public abstract U getState();
+	public U getState();
 }

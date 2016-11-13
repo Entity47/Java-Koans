@@ -9,7 +9,7 @@ import java.util.function.Supplier;
 import errors.EmptyKoan;
 import koans.StatefulKoan;
 
-public class ConsumerLambda extends StatefulKoan<Consumer<String>, List<String>> {
+public class ConsumerLambda implements StatefulKoan<Consumer<String>, List<String>> {
 
 	private List<String> consumedStrings = new ArrayList<String>();
 

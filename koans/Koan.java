@@ -4,14 +4,11 @@ package koans;
 import java.util.function.Supplier;
 
 /*
- * This class hides the fact that Koans are simply suppliers.
+ * Koans are basically suppliers, but I want to use a more descriptive method name to show that Koans must be answered.
  */
-public abstract class Koan<T> implements Supplier<T> {
+ @FunctionalInterface
+public interface Koan<T> {
 
-	public T get() {
-		return answer();
-	}
-
-	public abstract T answer();
+	public T answer();
 
 }

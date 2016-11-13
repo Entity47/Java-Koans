@@ -16,7 +16,7 @@ public class KoanTester {
 	public <T> void test(Koan<T> koan, Predicate<T> func) throws KoanError {
 
 		try {
-			T answer = koan.get();
+			T answer = koan.answer();
 			if (func.test(answer) == false) {
 				throw new KoanError(koan, "Incorrect answer");
 			}
@@ -30,7 +30,7 @@ public class KoanTester {
 	public <T, U> void test(StatefulKoan<T, U> koan, BiPredicate<T, U> func) throws KoanError {
 
 		try {
-			T answer = koan.get();
+			T answer = koan.answer();
 			U state = koan.getState();
 			if (func.test(answer, state) == false) {
 				throw new KoanError(koan, "Incorrect answer");

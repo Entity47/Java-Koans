@@ -6,7 +6,7 @@ import java.util.function.Supplier;
 import errors.EmptyKoan;
 import koans.Koan;
 
-public class SupplierLambda extends Koan<Supplier<Boolean>> {
+public class SupplierLambda implements Koan<Supplier<Boolean>> {
 
 	public Supplier<Boolean> answer() {
 

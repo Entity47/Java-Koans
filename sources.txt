@@ -1,7 +1,5 @@
 ./KoanMain.java
 ./errors/EmptyKoan.java
-./runner/Runner.java
-./runner/KoanRunner.java
 ./runner/KoanTester.java
 ./runner/functional/AnonymousClassTests.java
 ./runner/functional/ConsumerTests.java

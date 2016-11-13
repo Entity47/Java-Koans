@@ -4,7 +4,7 @@ package koans.functional;
 import errors.EmptyKoan;
 import koans.Koan;
 
-public class AnonymousClass extends Koan<AnonymousClass.Anon> {
+public class AnonymousClass implements Koan<AnonymousClass.Anon> {
 
 	public interface Anon {
 		public boolean isAnon();
