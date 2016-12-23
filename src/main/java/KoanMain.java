@@ -1,7 +1,7 @@
 
 import errors.EmptyKoan;
 import errors.KoanError;
-import runner.KoanRunner;
+import runner.OrderedKoanRunner;
 import runner.KoanTester;
 import runner.functional.FunctionalRunner;
 import runner.streams.StreamsRunner;
@@ -15,12 +15,12 @@ public class KoanMain {
 
 		KoanTester koanTester = new KoanTester();
 
-		List<KoanRunner> runners = new ArrayList<>();
+		List<OrderedKoanRunner> runners = new ArrayList<>();
 		runners.add(new FunctionalRunner());
 		runners.add(new StreamsRunner());
 
 		try {
-			for(KoanRunner runner : runners) {
+			for(OrderedKoanRunner runner : runners) {
 				runner.runTests(koanTester);
 			}
 		} catch (EmptyKoan empty) {
