@@ -1,10 +1,10 @@
 
 package koans.functional;
 
-import java.util.function.Function;
-
 import errors.EmptyKoan;
 import koans.Koan;
+
+import java.util.function.Function;
 
 public class FunctionLambda implements Koan<Function<Integer,Boolean>> {
 

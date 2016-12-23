@@ -1,32 +1,30 @@
 
 package runner;
 
-import java.lang.FunctionalInterface;
-import java.util.function.Predicate;
-import java.util.function.BiPredicate;
-import java.util.stream.Stream;
-
+import errors.KoanError;
 import koans.Koan;
 import koans.StatefulKoan;
-import errors.KoanError;
-import errors.EmptyKoan;
+
+import java.util.function.BiPredicate;
+import java.util.function.Predicate;
 
 public class KoanTester {
 
 	private static final String FAILED_MESSAGE = "Incorrect answer";
 
-	public <T> void test(Koan<T> koan, Predicate<T> func) throws KoanError {
+	public <KoanResponse> void test(Koan<KoanResponse> koan, Predicate<KoanResponse> func) throws KoanError {
 
-		T answer = koan.answer();
+		KoanResponse answer = koan.answer();
 		if (func.test(answer) == false) {
 			throw new KoanError(koan);
 		}
 	}
 
-	public <T, U> void test(StatefulKoan<T, U> koan, BiPredicate<T, U> func) throws KoanError {
+	public <KoanResponse, KoanState> void test(StatefulKoan<KoanResponse, KoanState> koan,
+											   BiPredicate<KoanResponse, KoanState> func) throws KoanError {
 
-		T answer = koan.answer();
-		U state = koan.getState();
+		KoanResponse answer = koan.answer();
+		KoanState state = koan.getState();
 		if (func.test(answer, state) == false) {
 			throw new KoanError(koan);
 		}

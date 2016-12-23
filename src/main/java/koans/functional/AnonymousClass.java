@@ -6,8 +6,9 @@ import koans.Koan;
 
 public class AnonymousClass implements Koan<AnonymousClass.Anon> {
 
+	@FunctionalInterface
 	public interface Anon {
-		public boolean isAnon();
+		boolean isAnon();
 	}
 
 	public Anon answer() {

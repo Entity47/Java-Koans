@@ -1,10 +1,10 @@
 
 package koans.functional;
 
-import java.util.function.Supplier;
-
 import errors.EmptyKoan;
 import koans.Koan;
+
+import java.util.function.Supplier;
 
 public class SupplierLambda implements Koan<Supplier<Boolean>> {
 

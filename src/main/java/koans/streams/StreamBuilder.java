@@ -3,7 +3,8 @@ package koans.streams;
 
 import errors.EmptyKoan;
 import koans.Koan;
-import java.util.stream.*;
+
+import java.util.stream.Stream;
 
 public class StreamBuilder implements Koan<Stream.Builder<String>> {
 

@@ -1,13 +1,12 @@
 
 package koans.functional;
 
-import java.util.List;
-import java.util.ArrayList;
-import java.util.function.Consumer;
-import java.util.function.Supplier;
-
 import errors.EmptyKoan;
 import koans.StatefulKoan;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.function.Consumer;
 
 public class ConsumerLambda implements StatefulKoan<Consumer<String>, List<String>> {
 

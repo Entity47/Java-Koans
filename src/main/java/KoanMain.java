@@ -1,13 +1,13 @@
 
-import java.util.List;
-import java.util.ArrayList;
-
 import errors.EmptyKoan;
 import errors.KoanError;
-import runner.KoanTester;
 import runner.KoanRunner;
+import runner.KoanTester;
 import runner.functional.FunctionalRunner;
 import runner.streams.StreamsRunner;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class KoanMain {
 
@@ -15,7 +15,7 @@ public class KoanMain {
 
 		KoanTester koanTester = new KoanTester();
 
-		List<KoanRunner> runners = new ArrayList<KoanRunner>();
+		List<KoanRunner> runners = new ArrayList<>();
 		runners.add(new FunctionalRunner());
 		runners.add(new StreamsRunner());
 

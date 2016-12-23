@@ -5,15 +5,11 @@ import java.util.function.Consumer;
 import java.util.function.BiPredicate;
 import java.util.List;
 
-import errors.KoanError;
-import koans.functional.ConsumerLambda;
-import runner.KoanRunner;
-
 public class ConsumerTests implements BiPredicate<Consumer<String>, List<String>> {
 
 	public boolean test(Consumer<String> consumer, List<String> state) {
 
-		return FunctionalTests.isValidLambda(consumer) && this.consumesStrings(consumer, state);
+		return FunctionalUtils.isLambda(consumer) && this.consumesStrings(consumer, state);
 	}
 
 	public boolean consumesStrings(Consumer<String> consumer, List<String> consumedStrings) {
