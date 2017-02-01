@@ -1,28 +1,17 @@
-
 import errors.EmptyKoan;
 import errors.KoanError;
-import runner.OrderedKoanRunner;
 import runner.KoanTester;
-import runner.functional.FunctionalRunner;
-import runner.streams.StreamsRunner;
-
-import java.util.ArrayList;
-import java.util.List;
+import runner.TestRunner;
 
 public class KoanMain {
 
 	public static void main(String[] args) {
 
+		TestRunner runner = new TestRunner();
 		KoanTester koanTester = new KoanTester();
 
-		List<OrderedKoanRunner> runners = new ArrayList<>();
-		runners.add(new FunctionalRunner());
-		runners.add(new StreamsRunner());
-
 		try {
-			for(OrderedKoanRunner runner : runners) {
-				runner.runTests(koanTester);
-			}
+			runner.runTests(koanTester);
 		} catch (EmptyKoan empty) {
 			StackTraceElement[] traceElems = empty.getStackTrace();
 			String koanName = traceElems[0].getClassName();
