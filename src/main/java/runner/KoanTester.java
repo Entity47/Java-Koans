@@ -3,8 +3,10 @@ package runner;
 
 import errors.KoanError;
 import koans.Koan;
+import koans.KoanFunction;
 import koans.StatefulKoan;
 
+import java.util.Map;
 import java.util.function.BiPredicate;
 import java.util.function.Predicate;
 
@@ -22,11 +24,23 @@ public class KoanTester {
 
 	public <KoanResponse, KoanState> void test(StatefulKoan<KoanResponse, KoanState> koan,
 											   BiPredicate<KoanResponse, KoanState> func) throws KoanError {
-
 		KoanResponse answer = koan.answer();
 		KoanState state = koan.getState();
 		if (func.test(answer, state) == false) {
 			throw new KoanError(koan);
+		}
+	}
+
+	public <KoanArgument, KoanResponse> void test(KoanFunction<KoanArgument,KoanResponse> koan,
+												  KoanFunctionTest<KoanArgument, KoanResponse> functionTest) throws KoanError {
+
+		Map<KoanArgument,KoanResponse> testCases = functionTest.getTestCases();
+		for(Map.Entry<KoanArgument, KoanResponse> entry : testCases.entrySet()) {
+			KoanResponse expectedResponse = entry.getValue();
+			KoanResponse actualResponse = koan.answer(entry.getKey());
+			if (expectedResponse.equals(actualResponse) == false) {
+				throw new KoanError(koan);
+			}
 		}
 	}
 }
