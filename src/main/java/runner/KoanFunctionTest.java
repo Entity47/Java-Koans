@@ -1,8 +1,8 @@
 package runner;
 
-import java.util.Map;
+import koans.KoanFunction;
 
 public interface KoanFunctionTest<T,U> {
 
-    Map<T,U> getTestCases();
+    boolean test(KoanFunction<T,U> koan);
 }

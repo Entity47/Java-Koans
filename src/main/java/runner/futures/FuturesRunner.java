@@ -2,8 +2,8 @@ package runner.futures;
 
 import errors.KoanError;
 import koans.futures.CompletedFuture;
-import runner.OrderedKoanRunner;
 import runner.KoanTester;
+import runner.OrderedKoanRunner;
 
 public class FuturesRunner implements OrderedKoanRunner {
 
